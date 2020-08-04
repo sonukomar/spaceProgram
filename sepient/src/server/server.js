@@ -10,6 +10,7 @@ import App from '../App'
 const PORT = process.env.PORT || 5001;
 const app = express()
 
+
 const router = express.Router()
 
 const serverRenderer = (req, res, next) => {
@@ -27,11 +28,7 @@ const serverRenderer = (req, res, next) => {
   })
 }
 router.use('^/$', serverRenderer)
-
-router.use(
-  express.static(path.resolve(__dirname, '..', 'build'), { maxAge: '30d' })
-)
-
+app.use('/static',express.static(path.join(__dirname,'../../build', 'static')))
 // tell the app to use the above rules
 app.use(router)
 
