@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Filter.css';
-import Button from 'react-bootstrap/Button'
-import { propTypes } from 'react-bootstrap/esm/Image';
+import Button from 'react-bootstrap/Button';
 const yearButton = [
     '2006',
     '2007',
