@@ -4,7 +4,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Filter from './Components/Filter/Filter';
 import ProgramCard from './Components/Program/ProgramCard';
-import Data from './mock/mock';
 
 const URL = 'https://api.spaceXdata.com/v3/launches?limit=50';
 
@@ -17,8 +16,6 @@ useEffect(() => {
 },[])
 
 const generateURL = (data) => {
-  debugger;
-  console.log(data);
   let url ;
   if(data.date && data.launch && data.land){
     url = URL+'launch_success='+data.launch+'land_success='+data.land+'launch_year='+data.date;
