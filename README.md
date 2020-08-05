@@ -1,4 +1,4 @@
-# spaceProgram
+# Space Program
 Project created using create-react-app and after development of the components, project is ejected using npm run eject and
 modified configuration to support other configs. 
 
