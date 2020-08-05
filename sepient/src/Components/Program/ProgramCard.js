@@ -26,16 +26,16 @@ const ProgramCard = (props) => {
           </ul>
         </span>
         <span className="card-subtext">
-          <strong>{appConstants.program["year"]}</strong>{" "}
+          <strong>{appConstants.program["year"]}</strong>
           {props.program.launch_year}
         </span>
         <span className="card-subtext">
-          <strong>{appConstants.program["launch"]}</strong>{" "}
+          <strong>{appConstants.program["launch"]}</strong>
           {props.program.launch_success &&
             props.program.launch_success.toString()}
         </span>
         <span className="card-subtext">
-          <strong>{appConstants.program["land"]}</strong>{" "}
+          <strong>{appConstants.program["land"]}</strong>
           {props.program.first_stage &&
             props.program.first_stage.cores[0].land_success.toString()}
         </span>
