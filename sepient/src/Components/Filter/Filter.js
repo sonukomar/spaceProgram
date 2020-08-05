@@ -40,7 +40,7 @@ const Filter = (props) => {
            <Button data-testid="launch-true "onClick={selectLunch} variant="primary">True</Button>
            <Button data-testid="launch-false" onClick={selectLunch} variant="primary">False</Button> 
            <br /><br />
-           <p id="land">Successful Landing</p>
+           <p id="launch">Successful Landing</p>
            <Button data-testid="land-true "onClick={selectLand} variant="primary">True</Button>
            <Button data-testid="land-false"onClick={selectLand} variant="primary">False</Button> 
         </div>
