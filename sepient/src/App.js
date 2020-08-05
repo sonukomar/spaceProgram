@@ -4,8 +4,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Filter from './Components/Filter/Filter';
 import ProgramCard from './Components/Program/ProgramCard';
+import {appConstants} from './contants';
 
-const URL = 'https://api.spaceXdata.com/v3/launches?limit=50';
+const URL = appConstants.landing['URL'];
 
 function App() {
 
@@ -43,11 +44,8 @@ const fetchData = (url = URL) => {
       (result) => {
         setResultData(result);
       },
-      // Note: it's important to handle errors here
-      // instead of a catch() block so that we don't swallow
-      // exceptions from actual bugs in components.
       (error) => {
-        alert('error');
+        console.log(error);
       }
     )
 }
@@ -56,7 +54,7 @@ const fetchData = (url = URL) => {
       
       <div className="container-fluid">
         <div className="row">
-          <Header headertext={'SpaceX Launch Programs'}/>
+          <Header headertext={appConstants.landing['heading']}/>
         </div>
         <div className="row">
           <div className="col-md-2 filterDiv">
@@ -70,7 +68,7 @@ const fetchData = (url = URL) => {
             }
           </div>
         </div>
-       <center> <h2>Developed By: Sonu Kumar</h2></center>
+          <center> <h2>{appConstants.landing['developer']}</h2></center>
       </div>
     </>
   );

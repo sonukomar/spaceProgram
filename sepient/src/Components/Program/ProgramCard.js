@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import './ProgramCard.css';
+import {appConstants} from '../../contants';
 
 
 const ProgramCard = (props) => {
@@ -10,20 +11,20 @@ const ProgramCard = (props) => {
             <Card.Body>
                  <Card.Title>{props.program.mission_name}</Card.Title>
                 <span className='card-subtext'>
-                    <strong>Mission ids:</strong> 
+                    <strong>{appConstants.program['missionId']}</strong> 
                     <ul>
                     {props.program.mission_id && props.program.mission_id.map( item => <li key={item}>{item}</li> )} 
                     </ul>
                     
                 </span>
                 <span className='card-subtext'>
-                    <strong>Launch Year:</strong> {props.program.launch_year} 
+                    <strong>{appConstants.program['year']}</strong> {props.program.launch_year} 
                 </span>
                 <span className='card-subtext'>
-                    <strong>Successful Launch:</strong> {props.program.launch_success && props.program.launch_success.toString()}
+                    <strong>{appConstants.program['launch']}</strong> {props.program.launch_success && props.program.launch_success.toString()}
                 </span>
                 <span className='card-subtext'>
-                    <strong>Successful Landing:</strong> {props.program.first_stage && props.program.first_stage.cores[0].land_success.toString()}
+                    <strong>{appConstants.program['land']}</strong> {props.program.first_stage && props.program.first_stage.cores[0].land_success.toString()}
                 </span>
             </Card.Body>
         </Card>

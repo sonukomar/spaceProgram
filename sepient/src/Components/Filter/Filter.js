@@ -1,15 +1,9 @@
 import React from 'react';
 import './Filter.css';
 import Button from 'react-bootstrap/Button';
-const yearButton = [
-    '2006',
-    '2007',
-    '2008',
-    '2009',
-    '2010',
-    '2011','2012','2013','2014','2015'
+import {appConstants} from '../../contants';
 
-]
+const yearButton = appConstants.filter.years;
 const filters = {};
 const Filter = (props) => {
 
@@ -23,12 +17,11 @@ const Filter = (props) => {
         fetchDataFromAPI(filters.land = (e.currentTarget.innerText).toLowerCase());
     }
     const fetchDataFromAPI = () => {
-        debugger;
         props.getData(filters)
     }
     return(
         <div className="filter">
-            <p id="filterSpan" data-testid="filter">{'Filters'}</p>
+            <p id="filterSpan" data-testid="filter">{appConstants.filter['filterText']}</p>
         
             {   yearButton.map(year => 
                     <Button key={year}onClick={selectYear} variant="primary">{year}</Button>
@@ -36,13 +29,13 @@ const Filter = (props) => {
             }
         
             <br /><br />
-           <p id="launch">Successful Launch</p>
-           <Button data-testid="launch-true "onClick={selectLunch} variant="primary">True</Button>
-           <Button data-testid="launch-false" onClick={selectLunch} variant="primary">False</Button> 
+           <p id="launch">{appConstants.filter['launch']}</p>
+        <Button data-testid="launch-true "onClick={selectLunch} variant="primary">{appConstants.filter['true']}</Button>
+           <Button data-testid="launch-false" onClick={selectLunch} variant="primary">{appConstants.filter['false']}</Button> 
            <br /><br />
-           <p id="launch">Successful Landing</p>
-           <Button data-testid="land-true "onClick={selectLand} variant="primary">True</Button>
-           <Button data-testid="land-false"onClick={selectLand} variant="primary">False</Button> 
+        <p id="launch">{appConstants.filter['land']}</p>
+           <Button data-testid="land-true "onClick={selectLand} variant="primary">{appConstants.filter['true']}</Button>
+           <Button data-testid="land-false"onClick={selectLand} variant="primary">{appConstants.filter['false']}</Button> 
         </div>
     )
 }
