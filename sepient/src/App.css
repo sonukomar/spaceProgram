@@ -4,29 +4,30 @@ body {
 
 
 @media only screen and (max-width: 450px) {
-  .filterDiv{
-    width:19rem!important;
+  .filterDiv {
+    width: 19rem !important;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  .filterDiv{
-    width:19rem!important;
+  .filterDiv {
+    width: 19rem !important;
   }
 }
+
 /* When the width is between 600px and 900px OR above 1100px - change the appearance of <div> */
 @media screen and (max-width: 800px) and (min-width: 500px) {
-  .filterDiv{
+  .filterDiv {
     flex: 0 0 33.333333% !important;
     max-width: 33.333333% !important;
   }
-  .card{
-    width:12rem!important;
+
+  .card {
+    width: 12rem !important;
   }
 
-  .programDiv{
-    flex: 0 0 66.666667%!important;
-    max-width: 66.666667%!important;
+  .programDiv {
+    flex: 0 0 66.666667% !important;
+    max-width: 66.666667% !important;
   }
 }
-

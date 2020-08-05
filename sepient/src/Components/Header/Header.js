@@ -1,10 +1,8 @@
-import React from 'react';
-import './Header.css';
+import React from "react";
+import "./Header.css";
 
 const Filter = (props) => {
-    return(
-    <div id="headerText">{props.headertext}</div>
-    )
-}
+  return <div id="headerText">{props.headertext}</div>;
+};
 
 export default Filter;

@@ -1,40 +1,44 @@
 .filter {
-    min-height:35rem;
-    background:white;
-    border-radius:0.3rem;
+    min-height: 35rem;
+    background: white;
+    border-radius: 0.3rem;
 }
 
-p#filterSpan{
+p#filterSpan {
     position: relative;
-   font-weight: 700;
-   margin:1rem 0 0 0.5rem;
+    font-weight: 700;
+    margin: 1rem 0 0 0.5rem;
 }
 
 .yearButton {
-    margin-top:1.9rem;
+    margin-top: 1.9rem;
 }
+
 .btn-primary {
     background-color: #b2d264c9;
     border-color: #b2d264c9;
 }
-button:hover{
-    background-color:  #618015c9!important;
-    border-color: #618015c9!important;
+
+button:hover {
+    background-color: #618015c9 !important;
+    border-color: #618015c9 !important;
     cursor: pointer;
-}
-button:active{
-    background-color:  #618015c9!important;
-    border-color: #618015c9!important;
-    cursor: pointer;
-}
-button {
-    margin-top:0.5rem;
-    margin-left:2rem; 
 }
 
-p#launch{
-    margin-left: 31px!important;
+button:active {
+    background-color: #618015c9 !important;
+    border-color: #618015c9 !important;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+}
+
+p#launch {
+    margin-left: 31px !important;
     font-weight: 400;
-    margin-bottom:0;
+    margin-bottom: 0;
     text-decoration: underline !important;
 }
