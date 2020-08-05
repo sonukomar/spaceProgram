@@ -28,21 +28,21 @@ const Filter = (props) => {
     }
     return(
         <div className="filter">
-            <p id="filterSpan">{'Filters'}</p>
+            <p id="filterSpan" data-testid="filter">{'Filters'}</p>
         
             {   yearButton.map(year => 
-                    <Button onClick={selectYear} variant="primary">{year}</Button>
+                    <Button key={year}onClick={selectYear} variant="primary">{year}</Button>
                 )
             }
         
             <br /><br />
            <p id="launch">Successful Launch</p>
-           <Button onClick={selectLunch} variant="primary">True</Button>
-           <Button onClick={selectLunch} variant="primary">False</Button> 
+           <Button data-testid="launch-true "onClick={selectLunch} variant="primary">True</Button>
+           <Button data-testid="launch-false" onClick={selectLunch} variant="primary">False</Button> 
            <br /><br />
-           <p id="launch">Successful Landing</p>
-           <Button onClick={selectLand} variant="primary">True</Button>
-           <Button onClick={selectLand} variant="primary">False</Button> 
+           <p id="land">Successful Landing</p>
+           <Button data-testid="land-true "onClick={selectLand} variant="primary">True</Button>
+           <Button data-testid="land-false"onClick={selectLand} variant="primary">False</Button> 
         </div>
     )
 }

@@ -65,7 +65,7 @@ const fetchData = (url = URL) => {
           <div className="col-md-10 programDiv">
             {
               resultData.map(item => 
-                <ProgramCard program = {item}/>
+                <ProgramCard program={item} key={item}/>
               )
             }
           </div>

@@ -12,7 +12,7 @@ const ProgramCard = (props) => {
                 <span className='card-subtext'>
                     <strong>Mission ids:</strong> 
                     <ul>
-                    {props.program.mission_id && props.program.mission_id.map( item => <li>{item}</li> )} 
+                    {props.program.mission_id && props.program.mission_id.map( item => <li key={item}>{item}</li> )} 
                     </ul>
                     
                 </span>
