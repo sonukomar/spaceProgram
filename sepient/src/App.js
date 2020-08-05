@@ -21,13 +21,16 @@ const generateURL = (data) => {
     url = URL+'launch_success='+data.launch+'land_success='+data.land+'launch_year='+data.date;
   }
   else if(data.date){
-    url = URL+'&amp;launch_success='+data.launch+'&amp;land_success='+data.land+'&amp;launch_year='+data.date;
+    url = URL+'&'+'launch_year='+data.date;
+  }
+  else if(data.land){
+    url = URL+'&'+'land_success='+data.land;
   }
   else if(data.launch){
-    url = URL+'&amp;launch_success=false&amp;land_success='+data.land+'&amp;launch_year='+data.date;
+    url = URL+ '& '+'launch_success='+data.launch;
   }
   else{
-    url = URL+'&amp;launch_success='+data.launch+'&amp;land_success=true&amp;launch_year='+data.date;
+    url = URL;
   }
 
   fetchData(url);
@@ -56,10 +59,10 @@ const fetchData = (url = URL) => {
           <Header headertext={'SpaceX Launch Programs'}/>
         </div>
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-md-2 filterDiv">
             <Filter getData={generateURL}/>
           </div>
-          <div className="col-md-10">
+          <div className="col-md-10 programDiv">
             {
               resultData.map(item => 
                 <ProgramCard program = {item}/>
