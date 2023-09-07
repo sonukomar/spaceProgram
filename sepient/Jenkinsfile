@@ -13,6 +13,42 @@ pipeline{
             post{
                 always{
                     echo "========always========"
+                    sh '''
+                    npm install
+                    npm run build
+                    '''
+                }
+                success{
+                    echo "========A executed successfully========"
+                }
+                failure{
+                    echo "========A execution failed========"
+                }
+            }
+        }
+         stage("test"){
+            steps{
+                echo "========executing test======="
+            }
+            post{
+                always{
+                    echo "========always========"
+                }
+                success{
+                    echo "========A executed successfully========"
+                }
+                failure{
+                    echo "========A execution failed========"
+                }
+            }
+        }
+         stage("deploy"){
+            steps{
+                echo "========executing deploy======="
+            }
+            post{
+                always{
+                    echo "========always========"
                 }
                 success{
                     echo "========A executed successfully========"
