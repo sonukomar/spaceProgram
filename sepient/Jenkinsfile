@@ -2,6 +2,9 @@ pipeline{
     agent{
         label "docker-agent-node"
     }
+    tools{
+        nodejs "node"
+    }
     triggers {
         pollSCM '* * * * *'
     }    
