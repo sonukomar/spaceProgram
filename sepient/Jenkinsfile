@@ -11,7 +11,7 @@ pipeline{
     stages{
         stage("Install"){
             steps{
-                echo "========executing building sonu======="
+                echo "========Installing node modules======="
             }
             post{
                 always{
@@ -21,28 +21,29 @@ pipeline{
                     '''
                 }
                 success{
-                    echo "========A executed successfully========"
+                    echo "========Node module installation done========"
                 }
                 failure{
-                    echo "========A execution failed========"
+                    echo "========Node module installation failed========"
                 }
             }
         }
         stage("Build"){
             steps{
-                echo "========executing building sonu======="
+                echo "========Building production atifacts======="
             }
             post{
                 always{
                     sh '''
+                    cd sepient/
                     npm run build
                     '''
                 }
                 success{
-                    echo "========A executed successfully========"
+                    echo "========Production atifacts built successfully========"
                 }
                 failure{
-                    echo "========A execution failed========"
+                    echo "========Production atifacts failed========"
                 }
             }
         }
@@ -52,7 +53,10 @@ pipeline{
             }
             post{
                 always{
-                    echo "========always========"
+                     sh '''
+                    cd sepient/
+                    npm run test
+                    '''
                 }
                 success{
                     echo "========A executed successfully========"
