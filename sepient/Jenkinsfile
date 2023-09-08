@@ -9,7 +9,7 @@ pipeline{
         pollSCM '* * * * *'
     }    
     stages{
-        stage("Install){
+        stage("Install"){
             steps{
                 echo "========executing building sonu======="
             }
@@ -28,7 +28,7 @@ pipeline{
                 }
             }
         }
-        stage("Build){
+        stage("Build"){
             steps{
                 echo "========executing building sonu======="
             }
