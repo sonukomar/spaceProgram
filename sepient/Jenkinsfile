@@ -55,7 +55,7 @@ pipeline{
                 always{
                      sh '''
                     cd sepient/
-                    npm run test
+                    npm run test:coverage
                     '''
                 }
                 success{
