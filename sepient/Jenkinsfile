@@ -9,15 +9,32 @@ pipeline{
         pollSCM '* * * * *'
     }    
     stages{
-        stage("build"){
+        stage("Install){
             steps{
                 echo "========executing building sonu======="
             }
             post{
                 always{
-                    echo "========always========"
                     sh '''
+                    cd sepient/ 
                     npm install
+                    '''
+                }
+                success{
+                    echo "========A executed successfully========"
+                }
+                failure{
+                    echo "========A execution failed========"
+                }
+            }
+        }
+        stage("Build){
+            steps{
+                echo "========executing building sonu======="
+            }
+            post{
+                always{
+                    sh '''
                     npm run build
                     '''
                 }
