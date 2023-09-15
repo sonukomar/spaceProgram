@@ -6,8 +6,8 @@ pipeline{
         nodejs 'node'
     }
     triggers {
-    githubPush()
-  }   
+        githubPush()
+    }   
     stages{
         stage("Installation Of Dependencies"){
             steps{
