@@ -10,6 +10,9 @@ pipeline{
     }   
     stages{
         stage("Installation Of Dependencies"){
+            when {
+                changeset "package.json"
+              }            
             steps{
                 echo "========Installing node modules======="
             }
