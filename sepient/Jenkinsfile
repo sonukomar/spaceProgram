@@ -59,10 +59,10 @@ pipeline{
                     '''
                 }
                 success{
-                    echo "========A executed successfully========"
+                    echo "========Test completed successfully========"
                 }
                 failure{
-                    echo "========A execution failed========"
+                    echo "========Test execution failed========"
                 }
             }
         }
@@ -75,10 +75,10 @@ pipeline{
                     echo "========always========"
                 }
                 success{
-                    echo "========A executed successfully========"
+                    echo "========Application deployed successfully========"
                 }
                 failure{
-                    echo "========A execution failed========"
+                    echo "========Application deployement failed========"
                 }
             }
         }
