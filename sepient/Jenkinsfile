@@ -9,10 +9,7 @@ pipeline{
         githubPush()
     }   
     stages{
-        stage("Installation Of Dependencies"){
-            when {
-                changeset "package.json"
-              }            
+        stage("Installation Of Dependencies"){           
             steps{
                 echo "========Installing node modules======="
             }
