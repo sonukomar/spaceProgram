@@ -17,9 +17,6 @@ pipeline{
                 echo "========Installing node modules======="
             }
             post{
-                when {
-                    changeset "package.json"
-                }
                 always{
                     sh '''
                     cd sepient/ 
