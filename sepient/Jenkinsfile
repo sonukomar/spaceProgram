@@ -9,7 +9,7 @@ pipeline{
         pollSCM '* * * * *'
     }    
     stages{
-        stage("Install"){
+        stage("Installation Of Dependencies"){
             steps{
                 echo "========Installing node modules======="
             }
